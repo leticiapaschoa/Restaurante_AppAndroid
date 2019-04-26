@@ -1,15 +1,13 @@
-package com.unimetrocamp.restaurante_app.Business;
+package com.unimetrocamp.restaurante_app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.unimetrocamp.restaurante_app.Entity.Prato;
-import com.unimetrocamp.restaurante_app.R;
 
 import java.util.List;
 
@@ -40,7 +38,7 @@ public class AdapterCardapio extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = act.getLayoutInflater().inflate(R.layout.item_cardapio, parent, false);
+        View view = act.getLayoutInflater().inflate(R.layout.activity_main, parent, false);
         Prato prato = cardapio.get(position);
 
         TextView nome = (TextView)

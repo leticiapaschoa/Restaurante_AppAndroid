@@ -1,4 +1,4 @@
-package com.unimetrocamp.restaurante_app.Entity;
+package com.unimetrocamp.restaurante_app;
 
 import java.util.List;
 

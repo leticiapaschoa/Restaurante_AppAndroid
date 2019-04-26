@@ -1,17 +1,11 @@
-package com.unimetrocamp.restaurante_app.Business;
+package com.unimetrocamp.restaurante_app;
 
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toolbar;
-
-import com.unimetrocamp.restaurante_app.Entity.ContaFinal;
-import com.unimetrocamp.restaurante_app.Entity.Prato;
-import com.unimetrocamp.restaurante_app.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,22 +13,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lista_cardapio);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
+        setContentView(R.layout.cardapio);
 
         List<Prato> cardapio = PratosCardapio();
 
