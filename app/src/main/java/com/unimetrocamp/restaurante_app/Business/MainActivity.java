@@ -1,11 +1,13 @@
-package com.unimetrocamp.restaurante_app;
+package com.unimetrocamp.restaurante_app.Business;
 
-import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
+
+import com.unimetrocamp.restaurante_app.Entity.ContaFinal;
+import com.unimetrocamp.restaurante_app.Entity.Prato;
+import com.unimetrocamp.restaurante_app.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cardapio);
+        setContentView(R.layout.lista_cardapio);
 
         List<Prato> cardapio = PratosCardapio();
 

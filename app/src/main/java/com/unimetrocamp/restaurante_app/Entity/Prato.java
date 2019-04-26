@@ -1,4 +1,4 @@
-package com.unimetrocamp.restaurante_app;
+package com.unimetrocamp.restaurante_app.Entity;
 
 public class Prato {
     public String nome;
