@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mensagem_dafault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="14sp"
+        app:fontFamily="monospace"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Final:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:fontFamily="monospace"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+    <TextView
+        android:id="@+id/valor_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="470dp" />
+
+    <ListView
+        android:id="@+id/lista_conta_final"
+        android:layout_width="368dp"
+        android:layout_height="405dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="57dp" />
+
+</android.support.constraint.ConstraintLayout>
