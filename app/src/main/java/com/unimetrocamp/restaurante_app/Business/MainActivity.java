@@ -3,7 +3,10 @@ package com.unimetrocamp.restaurante_app.Business;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.unimetrocamp.restaurante_app.Entity.ContaFinal;
 import com.unimetrocamp.restaurante_app.Entity.Prato;
@@ -12,6 +15,8 @@ import com.unimetrocamp.restaurante_app.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.unimetrocamp.restaurante_app.R.id.addButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
         List<Prato> cardapio = PratosCardapio();
 
         ListView CardapioLista = (ListView) findViewById(R.id.lista);
+        CardapioLista.setOnItemClickListener(onItemClickListener);
 
         //chamada da nossa implementação
         AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
         CardapioLista.setAdapter(adapter);
+
+        ImageButton addButton = new ImageButton(MainActivity.this);
+        addButton.setOnClickListener(addButtonClickListener);
     }
 
     private List<Prato> PratosCardapio() {
@@ -34,9 +43,30 @@ public class MainActivity extends AppCompatActivity {
         return new ArrayList<>(Arrays.asList(
                 new Prato("Lanche",  29.00, "lanche"),
                 new Prato("Hot Dog",  20.00, "hotdog"),
+                new Prato("Batata Frita", 15.00, "batata"),
+                new Prato("Pizza", 25.00, "pizza"),
+                new Prato("Pastel", 5.00, "pastel"),
                 new Prato("Milk Shake", 10.00, "milkshake")
         ));
     }
+
+    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+            Toast.makeText(MainActivity.this, position,Toast.LENGTH_SHORT);
+        }
+
+    };
+
+
+    private View.OnClickListener addButtonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            View parentRow = (View) v.getParent();
+            ListView listView = (ListView) parentRow.getParent();
+            final int position = listView.getPositionForView(parentRow);
+        }
+    };
 
     public void AddItem(View view) {
 
