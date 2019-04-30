@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 new Prato("Batata Frita", 15.00, "batata"),
                 new Prato("Pizza", 25.00, "pizza"),
                 new Prato("Pastel", 5.00, "pastel"),
+                new Prato("Esfiha", 8.00, "esfiha"),
                 new Prato("Milk Shake", 10.00, "milkshake")
         ));
     }
