@@ -1,9 +1,11 @@
 package com.unimetrocamp.restaurante_app.Business;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(addButtonClickListener);
     }
 
+    public void onClickGoFinal(View v){
+        Intent myIntent = new Intent(getBaseContext(),   Conta.class);
+        startActivity(myIntent);
+    }
+
+
     private List<Prato> PratosCardapio() {
 
         return new ArrayList<>(Arrays.asList(
@@ -50,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 new Prato("Milk Shake", 10.00, "milkshake")
         ));
     }
+
+
 
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
@@ -69,10 +79,4 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    public void AddItem(View view) {
-
-        ContaFinal conta = new ContaFinal();
-        String item = String.valueOf(view.getId());
-
-    }
 }

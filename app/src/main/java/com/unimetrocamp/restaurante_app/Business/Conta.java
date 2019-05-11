@@ -13,9 +13,9 @@ public class Conta extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.conta_final);
+        setContentView(R.layout.lista_cardapio);
 
-        //Elementos tela:
+     /*   //Elementos tela:
         TextView textoDefault = (TextView) findViewById(R.id.mensagem_default);
 
         //Instâncias
@@ -24,6 +24,6 @@ public class Conta extends AppCompatActivity {
         String mensagemDefault = contaFinal.itensCardapio.isEmpty() ? "Você não adicionou nenhum item." : "Obrigado pela preferência!";
         textoDefault.setText(mensagemDefault);
 
-
+*/
     }
 }
