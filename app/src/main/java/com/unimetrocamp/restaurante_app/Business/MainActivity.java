@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         List<Prato> cardapio = PratosCardapio();
 
         ListView CardapioLista = (ListView) findViewById(R.id.lista);
-        CardapioLista.setOnItemClickListener(onItemClickListener);
 
         //chamada da nossa implementação
         AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
@@ -38,13 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton addButton = new ImageButton(MainActivity.this);
         addButton.setOnClickListener(addButtonClickListener);
-    }
 
-    public void onClickGoFinal(View v){
-        Intent myIntent = new Intent(getBaseContext(),   Conta.class);
-        startActivity(myIntent);
-    }
+        //Chamada tela final
+        Button Chamada = (Button) findViewById(R.id.goContaFinal);
+        Chamada.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent int1= new Intent(MainActivity.this,Conta.class);
+                startActivity(int1);
+            }
+        });
+
+    }
 
     private List<Prato> PratosCardapio() {
 
@@ -79,4 +85,6 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
 }
+

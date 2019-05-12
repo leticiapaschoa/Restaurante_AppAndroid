@@ -13,9 +13,9 @@ public class Conta extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lista_cardapio);
-
-     /*   //Elementos tela:
+        setContentView(R.layout.conta_final);
+/*
+        //Elementos tela:
         TextView textoDefault = (TextView) findViewById(R.id.mensagem_default);
 
         //Instâncias
@@ -26,4 +26,5 @@ public class Conta extends AppCompatActivity {
 
 */
     }
+
 }

@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="TextView"
+        android:text="Conta Final"
         android:textColor="@android:color/background_dark"
         app:fontFamily="monospace" />
 
