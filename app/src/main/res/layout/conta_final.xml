@@ -29,9 +29,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="142dp"
-        android:layout_marginRight="142dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="25dp"
         android:text="Total Final:"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
@@ -50,5 +50,17 @@
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:fontFamily="monospace" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="228dp"
+        android:layout_marginRight="228dp"
+        android:layout_marginBottom="12dp"
+        android:text="Finalizar Conta" />
 
 </RelativeLayout>
