@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         ListView CardapioLista = (ListView) findViewById(R.id.lista);
 
+
+
         //chamada da nossa implementação
         AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
         CardapioLista.setAdapter(adapter);
@@ -50,7 +52,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        CardapioLista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Seu codigo aqui
+                //Intent intent = new Intent(this, NovaAtividade.class);
+                //start
+                Toast.makeText(MainActivity.this,
+                        "xama", Toast.LENGTH_LONG).show();
+            }
+
+    });}
+
+
 
     private List<Prato> PratosCardapio() {
 
