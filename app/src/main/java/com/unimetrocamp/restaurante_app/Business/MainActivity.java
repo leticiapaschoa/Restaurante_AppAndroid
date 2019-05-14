@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.unimetrocamp.restaurante_app.Entity.ContaFinal;
@@ -24,10 +23,6 @@ import static com.unimetrocamp.restaurante_app.R.id.addButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton addButon;
-    private TextView tvcarrinho;
-    private int contador = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +36,8 @@ public class MainActivity extends AppCompatActivity {
         AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
         CardapioLista.setAdapter(adapter);
 
-
         ImageButton addButton = new ImageButton(MainActivity.this);
         addButton.setOnClickListener(addButtonClickListener);
-
-        tvcarrinho = (TextView) findViewById(R.id.tvcarrinho);
 
         //Chamada tela final
         Button Chamada = (Button) findViewById(R.id.goContaFinal);
@@ -58,20 +50,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-    }
-
-    public void addcarrinho(View view){
-        addButon = (ImageButton) findViewById(addButton);
-
-        this.addButon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                contador++;
-
-                tvcarrinho.setText("Nº de Itens add: "+contador);
-            }
-        });
     }
 
     private List<Prato> PratosCardapio() {
@@ -109,3 +87,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
