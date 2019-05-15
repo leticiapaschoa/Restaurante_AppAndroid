@@ -53,8 +53,7 @@
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
         android:background="@android:color/transparent"
-        app:srcCompat="@drawable/add"
-        android:onClick="addcarrinho"/>
+        app:srcCompat="@drawable/add" />
 
     <TextView
         android:id="@+id/qnt_itens"

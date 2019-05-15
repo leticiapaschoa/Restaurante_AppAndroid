@@ -3,6 +3,7 @@ package com.unimetrocamp.restaurante_app.Business;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -60,21 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 new Prato("Batata Frita", 15.00, "batata"),
                 new Prato("Pizza", 25.00, "pizza"),
                 new Prato("Pastel", 5.00, "pastel"),
-                new Prato("Esfiha", 8.00, "esfiha"),
-                new Prato("Milk Shake", 10.00, "milkshake")
+                new Prato("Esfiha", 8.00, "esfiha")
         ));
     }
-
-
-
-    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-            Toast.makeText(MainActivity.this, position,Toast.LENGTH_SHORT);
-        }
-
-    };
-
 
     private View.OnClickListener addButtonClickListener = new View.OnClickListener() {
         @Override
@@ -82,9 +71,11 @@ public class MainActivity extends AppCompatActivity {
             View parentRow = (View) v.getParent();
             ListView listView = (ListView) parentRow.getParent();
             final int position = listView.getPositionForView(parentRow);
+
+            ContaFinal conta = new ContaFinal();
+            conta.itensCardapio.add(PratosCardapio().get(position));
+
         }
     };
-
-
 }
 
