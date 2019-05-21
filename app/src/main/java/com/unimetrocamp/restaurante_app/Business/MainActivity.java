@@ -4,28 +4,23 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.unimetrocamp.restaurante_app.Entity.ContaFinal;
 import com.unimetrocamp.restaurante_app.Entity.Prato;
 import com.unimetrocamp.restaurante_app.R;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.unimetrocamp.restaurante_app.R.id.addButton;
+public class MainActivity extends AppCompatActivity implements Serializable {
 
-public class MainActivity extends AppCompatActivity {
-
+    double valor = 0;
     private int contador;
     private TextView tvcarrinho;
+    List<Prato> cardapio = PratosCardapio();
+    AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
 
 
     @Override
@@ -33,16 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_cardapio);
 
-        List<Prato> cardapio = PratosCardapio();
-
         ListView CardapioLista = (ListView) findViewById(R.id.lista);
 
         //chamada da nossa implementação
-        AdapterCardapio adapter = new AdapterCardapio(cardapio, this);
         CardapioLista.setAdapter(adapter);
-
-        ImageButton addButton = new ImageButton(MainActivity.this);
-        addButton.setOnClickListener(addButtonClickListener);
 
         //Chamada tela final
         Button Chamada = (Button) findViewById(R.id.goContaFinal);
@@ -51,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent int1= new Intent(MainActivity.this,Conta.class);
+                int1.putExtra ("ValorFinal", valor+"");
                 startActivity(int1);
             }
         });
-
     }
 
     private List<Prato> PratosCardapio() {
@@ -65,38 +54,24 @@ public class MainActivity extends AppCompatActivity {
                 new Prato("Batata Frita", 15.00, "batata"),
                 new Prato("Pizza", 25.00, "pizza"),
                 new Prato("Pastel", 5.00, "pastel"),
-                new Prato("Esfiha", 8.00, "esfiha"),
-                new Prato("Milk Shake", 10.00, "milkshake")
+                new Prato("Esfiha", 8.00, "esfiha")
         ));
     }
+
 
     public void addcarrinho(View view) {
         tvcarrinho = (TextView) findViewById(R.id.tvcarrinho);
         contador++;
         tvcarrinho.setText("Nº de Itens add: " + contador);
-        Toast.makeText(this, "Add", Toast.LENGTH_SHORT).show();
+
+
+        View parentRow = (View) view.getParent();
+        ListView listView = (ListView) parentRow.getParent();
+        final int position = listView.getPositionForView(parentRow);
+
+        Prato p = adapter.getItem(position);
+        valor += p.preco;
 
     }
 
-    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-            Toast.makeText(MainActivity.this, position,Toast.LENGTH_SHORT);
-        }
-
-    };
-
-
-    private View.OnClickListener addButtonClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            View parentRow = (View) v.getParent();
-            ListView listView = (ListView) parentRow.getParent();
-            final int position = listView.getPositionForView(parentRow);
-        }
-    };
-
-
-
 }
-

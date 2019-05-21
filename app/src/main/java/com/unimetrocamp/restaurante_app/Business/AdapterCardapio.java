@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.unimetrocamp.restaurante_app.Entity.Prato;
 import com.unimetrocamp.restaurante_app.R;
-
 import java.util.List;
 
 public class AdapterCardapio extends BaseAdapter {
@@ -29,7 +27,7 @@ public class AdapterCardapio extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public Prato getItem(int position) {
         return cardapio.get(position);
     }
 
