@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#0A9785">
 
     <TextView
         android:id="@+id/mensagem_default"
@@ -13,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="Conta Final"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:fontFamily="monospace" />
 
@@ -29,7 +30,7 @@
         android:layout_marginBottom="474dp"
         android:autoText="false"
         android:text="Total :"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:visibility="visible"
         app:fontFamily="monospace"
@@ -45,7 +46,7 @@
         android:layout_marginEnd="160dp"
         android:layout_marginRight="160dp"
         android:layout_marginBottom="475dp"
-        android:textColor="@android:color/background_dark"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:visibility="visible"
         app:fontFamily="monospace"
@@ -58,10 +59,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="119dp"
-        android:layout_marginRight="119dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginRight="129dp"
+        android:layout_marginBottom="61dp"
+        android:background="#F0F7F4"
         android:text="Finalizar Conta"
+        android:textColor="#0A9785"
         android:textSize="18sp" />
 
 </RelativeLayout>

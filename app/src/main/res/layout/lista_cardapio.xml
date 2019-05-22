@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5EDDF">
+    android:background="#0A9785">
 
     <ListView
         android:id="@+id/lista"
@@ -24,8 +24,10 @@
         android:layout_marginEnd="49dp"
         android:layout_marginRight="49dp"
         android:layout_marginBottom="9dp"
+        android:background="#FFFEFE"
         android:onClick="onClickGoFinal"
-        android:text="Conta Final" />
+        android:text="Conta Final"
+        android:textColor="#0A9785" />
 
     <TextView
         android:id="@+id/textView"
@@ -37,7 +39,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="175dp"
         android:layout_marginRight="175dp"
-        android:text="Cardápio" />
+        android:text="Cardápio"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvcarrinho"
@@ -49,7 +52,8 @@
         android:layout_marginEnd="219dp"
         android:layout_marginRight="219dp"
         android:layout_marginBottom="17dp"
-        android:text="Nº de Itens add:" />
+        android:text="Nº de Itens add:"
+        android:textColor="#F3F1F1" />
 
 
 </RelativeLayout>
