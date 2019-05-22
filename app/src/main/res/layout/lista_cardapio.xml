@@ -21,13 +21,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="49dp"
-        android:layout_marginRight="49dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="21dp"
         android:background="#FFFEFE"
         android:onClick="onClickGoFinal"
         android:text="Conta Final"
-        android:textColor="#0A9785" />
+        android:textColor="#0A9785"
+        app:fontFamily="monospace"/>
 
     <TextView
         android:id="@+id/textView"
@@ -36,24 +37,29 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginRight="175dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginRight="145dp"
         android:text="Cardápio"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace" />
 
     <TextView
         android:id="@+id/tvcarrinho"
-        android:layout_width="164dp"
+        android:layout_width="170dp"
         android:layout_height="44dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="219dp"
-        android:layout_marginRight="219dp"
-        android:layout_marginBottom="17dp"
-        android:text="Nº de Itens add:"
-        android:textColor="#F3F1F1" />
+        android:layout_marginEnd="238dp"
+        android:layout_marginRight="238dp"
+        android:layout_marginBottom="19dp"
+        android:text="Nº. Itens:"
+        android:textColor="#F3F1F1"
+        android:textSize="18sp"
+        app:fontFamily="monospace"/>
 
 
 </RelativeLayout>

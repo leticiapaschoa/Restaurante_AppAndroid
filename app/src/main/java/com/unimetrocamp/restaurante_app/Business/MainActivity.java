@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
     public void addcarrinho(View view) {
         tvcarrinho = (TextView) findViewById(R.id.tvcarrinho);
         contador++;
-        tvcarrinho.setText("Nº de Itens add: " + contador);
+        tvcarrinho.setText("Nº Itens: " + contador);
 
 
         View parentRow = (View) view.getParent();
